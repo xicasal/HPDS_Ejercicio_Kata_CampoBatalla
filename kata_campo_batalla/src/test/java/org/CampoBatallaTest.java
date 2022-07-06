@@ -22,4 +22,10 @@ public class CampoBatallaTest {
     public void test_letras_fuera_del_refugio_mueren(){
         assertEquals("fgh", campoBatalla.supervivientes("ab#de[fgh]ijk"));
     }
+
+    @Test
+    public void test_todas_las_letras_mueren_dos_bombas(){
+        assertEquals("", campoBatalla.supervivientes("ab#de[fgh]ij#k"));
+        assertEquals("", campoBatalla.supervivientes("a##bde[fgh]ijk"));
+    }
 }
